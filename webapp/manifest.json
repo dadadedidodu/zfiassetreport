@@ -111,11 +111,6 @@
           "pattern": ":?query:",
           "name": "AssetList",
           "target": "AssetList"
-        },
-        {
-          "pattern": "Asset({key}):?query:",
-          "name": "AssetObjectPage",
-          "target": "AssetObjectPage"
         }
       ],
       "targets": {
@@ -127,13 +122,7 @@
             "settings": {
               "contextPath": "/Asset",
               "variantManagement": "Page",
-              "navigation": {
-                "Asset": {
-                  "detail": {
-                    "route": "AssetObjectPage"
-                  }
-                }
-              },
+              "navigation": {},
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
@@ -141,17 +130,6 @@
                   }
                 }
               }
-            }
-          }
-        },
-        "AssetObjectPage": {
-          "type": "Component",
-          "id": "AssetObjectPage",
-          "name": "sap.fe.templates.ObjectPage",
-          "options": {
-            "settings": {
-              "editableHeaderContent": false,
-              "contextPath": "/Asset"
             }
           }
         }

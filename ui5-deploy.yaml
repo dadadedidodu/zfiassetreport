@@ -22,7 +22,7 @@ builder:
           name: ZFIASSETREPORT
           description: Initial Deployment
           package: ZFI_ASSET_REPORT
-          transport: AK8K900708
+          transport: AK8K900755
         exclude:
           - /test/
           - /localService/

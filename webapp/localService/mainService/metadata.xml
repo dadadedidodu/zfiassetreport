@@ -62,54 +62,54 @@
                     <PropertyRef Name="CompanyCode"/>
                     <PropertyRef Name="MasterFixedAsset"/>
                     <PropertyRef Name="FixedAsset"/>
+                    <PropertyRef Name="GoodsReceiptDocument"/>
+                    <PropertyRef Name="ItemCode"/>
+                    <PropertyRef Name="PlannedUsefulLifeInPeriods"/>
+                    <PropertyRef Name="PlannedUsefulLifeInYears"/>
                 </Key>
                 <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4"/>
                 <Property Name="MasterFixedAsset" Type="Edm.String" Nullable="false" MaxLength="12"/>
                 <Property Name="FixedAsset" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="GoodsReceiptDocument" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="ItemCode" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="PlannedUsefulLifeInPeriods" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="PlannedUsefulLifeInYears" Type="Edm.String" Nullable="false" MaxLength="3"/>
                 <Property Name="AssetRowID" Type="Edm.String" Nullable="false" MaxLength="1"/>
                 <Property Name="AssetNumberDisplay" Type="Edm.String" Nullable="false" MaxLength="17"/>
                 <Property Name="AssetTag" Type="Edm.String" Nullable="false" MaxLength="1"/>
                 <Property Name="CreationDate" Type="Edm.Date"/>
-                <Property Name="ItemCode" Type="Edm.String" Nullable="false" MaxLength="18"/>
                 <Property Name="AssetDescription" Type="Edm.String" Nullable="false" MaxLength="50"/>
-                <Property Name="GoodsReceiptDocument" Type="Edm.String" Nullable="false" MaxLength="10"/>
-                <Property Name="DisbursementVoucher" Type="Edm.String" Nullable="false" MaxLength="10"/>
                 <Property Name="SerialNumber" Type="Edm.String" Nullable="false" MaxLength="18"/>
                 <Property Name="GroupCode" Type="Edm.String" Nullable="false" MaxLength="3"/>
                 <Property Name="GroupName" Type="Edm.String" Nullable="false" MaxLength="10"/>
                 <Property Name="AssetClass" Type="Edm.String" Nullable="false" MaxLength="8"/>
                 <Property Name="AssetClassName" Type="Edm.String" Nullable="false" MaxLength="20"/>
                 <Property Name="AcquisitionDate" Type="Edm.Date"/>
-                <Property Name="CategoryCode" Type="Edm.String" Nullable="false" MaxLength="1"/>
-                <Property Name="CategoryName" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="CategoryCode" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="CategoryName" Type="Edm.String" Nullable="false" MaxLength="75"/>
                 <Property Name="CostCenter" Type="Edm.String" Nullable="false" MaxLength="10"/>
                 <Property Name="CostCenterName" Type="Edm.String" Nullable="false" MaxLength="20"/>
-                <Property Name="OwnerCode" Type="Edm.String" Nullable="false" MaxLength="8"/>
-                <Property Name="OwnerName" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="OwnerCode" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="OwnerName" Type="Edm.String" Nullable="false" MaxLength="80"/>
                 <Property Name="BranchCode" Type="Edm.String" Nullable="false" MaxLength="1"/>
                 <Property Name="BranchName" Type="Edm.String" Nullable="false" MaxLength="10"/>
                 <Property Name="ProfitCenter" Type="Edm.String" Nullable="false" MaxLength="10"/>
                 <Property Name="ProfitCenterName" Type="Edm.String" Nullable="false" MaxLength="20"/>
                 <Property Name="Segment" Type="Edm.String" Nullable="false" MaxLength="10"/>
                 <Property Name="SegmentName" Type="Edm.String" Nullable="false" MaxLength="50"/>
-                <Property Name="AssetLocation" Type="Edm.String" Nullable="false" MaxLength="10"/>
-                <Property Name="LocationName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="AssetLocation" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="LocationName" Type="Edm.String" Nullable="false" MaxLength="30"/>
                 <Property Name="Room" Type="Edm.String" Nullable="false" MaxLength="8"/>
-                <Property Name="SublocationCode" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="SublocationCode" Type="Edm.String" Nullable="false" MaxLength="8"/>
                 <Property Name="SublocationName" Type="Edm.String" Nullable="false" MaxLength="1"/>
                 <Property Name="DepartmentCode" Type="Edm.String" Nullable="false" MaxLength="10"/>
                 <Property Name="DepartmentName" Type="Edm.String" Nullable="false" MaxLength="20"/>
                 <Property Name="CompanyCodeCurrency" Type="Edm.String" Nullable="false" MaxLength="5"/>
-                <Property Name="AcquisitionCost" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="variable"/>
+                <Property Name="AcquisitionCost" Type="Edm.Decimal" Nullable="false" Precision="23" Scale="variable"/>
                 <Property Name="CapitalizationDate" Type="Edm.Date"/>
-                <Property Name="PlannedUsefulLifeInPeriods" Type="Edm.String" Nullable="false" MaxLength="3"/>
-                <Property Name="PlannedUsefulLifeInYears" Type="Edm.String" Nullable="false" MaxLength="3"/>
                 <Property Name="UsefulLifeDisplay" Type="Edm.Int32" Nullable="false"/>
                 <Property Name="AssetIsRetired" Type="Edm.String" Nullable="false" MaxLength="1"/>
                 <Property Name="PlannedRetirementDate" Type="Edm.Date"/>
-                <Property Name="AssetRealDepreciationArea" Type="Edm.String" Nullable="false" MaxLength="2"/>
-                <Property Name="PurchaseOrder" Type="Edm.String" Nullable="false" MaxLength="10"/>
-                <Property Name="PurchaseOrderItem" Type="Edm.String" Nullable="false" MaxLength="5"/>
                 <Property Name="CompanyCodeName" Type="Edm.String" Nullable="false" MaxLength="25"/>
                 <Property Name="CreatedByUser" Type="Edm.String" Nullable="false" MaxLength="12"/>
             </EntityType>
@@ -142,6 +142,30 @@
                 <Annotation Term="SAP__common.QuickInfo" String="Asset Subnumber"/>
                 <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ANLN2"/>
             </Annotations>
+            <Annotations Target="SAP__self.AssetType/GoodsReceiptDocument">
+                <Annotation Term="SAP__common.Label" String="Asset Details"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Mat. Doc."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Number of Material Document"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MBLNR"/>
+            </Annotations>
+            <Annotations Target="SAP__self.AssetType/ItemCode">
+                <Annotation Term="SAP__common.Label" String="Item Code"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Material"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Material Number"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MATNR"/>
+            </Annotations>
+            <Annotations Target="SAP__self.AssetType/PlannedUsefulLifeInPeriods">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Planned Useful Life in Periods"/>
+            </Annotations>
+            <Annotations Target="SAP__self.AssetType/PlannedUsefulLifeInYears">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Planned Useful Life"/>
+                <Annotation Term="SAP__common.Heading" String="Planned Useful Life in Years"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Planned Useful Life in Years"/>
+            </Annotations>
             <Annotations Target="SAP__self.AssetType/AssetRowID">
                 <Annotation Term="SAP__common.Label" String="#"/>
             </Annotations>
@@ -157,32 +181,11 @@
                 <Annotation Term="SAP__common.Heading" String="Created On"/>
                 <Annotation Term="SAP__common.QuickInfo" String="Record Creation Date"/>
             </Annotations>
-            <Annotations Target="SAP__self.AssetType/ItemCode">
-                <Annotation Term="SAP__common.Label" String="Item Code"/>
-                <Annotation Term="SAP__common.IsUpperCase"/>
-                <Annotation Term="SAP__common.Heading" String="Material"/>
-                <Annotation Term="SAP__common.QuickInfo" String="Material Number"/>
-                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MATNR"/>
-            </Annotations>
             <Annotations Target="SAP__self.AssetType/AssetDescription">
                 <Annotation Term="SAP__common.Label" String="Asset Description"/>
                 <Annotation Term="SAP__common.Heading" String="Asset Description"/>
                 <Annotation Term="SAP__common.QuickInfo" String="Asset Description"/>
                 <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TXA50_ANLT"/>
-            </Annotations>
-            <Annotations Target="SAP__self.AssetType/GoodsReceiptDocument">
-                <Annotation Term="SAP__common.Label" String="Asset Details"/>
-                <Annotation Term="SAP__common.IsUpperCase"/>
-                <Annotation Term="SAP__common.Heading" String="Mat. Doc."/>
-                <Annotation Term="SAP__common.QuickInfo" String="Number of Material Document"/>
-                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MBLNR"/>
-            </Annotations>
-            <Annotations Target="SAP__self.AssetType/DisbursementVoucher">
-                <Annotation Term="SAP__common.IsUpperCase"/>
-                <Annotation Term="SAP__common.Label" String="Material Document"/>
-                <Annotation Term="SAP__common.Heading" String="Mat. Doc."/>
-                <Annotation Term="SAP__common.QuickInfo" String="Number of Material Document"/>
-                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MBLNR"/>
             </Annotations>
             <Annotations Target="SAP__self.AssetType/SerialNumber">
                 <Annotation Term="SAP__common.Label" String="Serial No."/>
@@ -222,6 +225,8 @@
             </Annotations>
             <Annotations Target="SAP__self.AssetType/CategoryCode">
                 <Annotation Term="SAP__common.Label" String="Category Code"/>
+                <Annotation Term="SAP__common.Heading" String="Property Type"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Property Type"/>
             </Annotations>
             <Annotations Target="SAP__self.AssetType/CategoryName">
                 <Annotation Term="SAP__common.Label" String="Category Name"/>
@@ -240,13 +245,14 @@
             </Annotations>
             <Annotations Target="SAP__self.AssetType/OwnerCode">
                 <Annotation Term="SAP__common.Label" String="Owner Code"/>
-                <Annotation Term="SAP__common.IsDigitSequence"/>
-                <Annotation Term="SAP__common.Heading" String="Pers.No."/>
-                <Annotation Term="SAP__common.QuickInfo" String="Personnel Number"/>
-                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=PERNR_D"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="User Resp."/>
+                <Annotation Term="SAP__common.QuickInfo" String="User Responsible"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VERAK_USER"/>
             </Annotations>
             <Annotations Target="SAP__self.AssetType/OwnerName">
                 <Annotation Term="SAP__common.Label" String="Owner Name"/>
+                <Annotation Term="SAP__common.QuickInfo" String="User Description"/>
             </Annotations>
             <Annotations Target="SAP__self.AssetType/BranchCode">
                 <Annotation Term="SAP__common.Label" String="Branch Code"/>
@@ -268,13 +274,14 @@
             <Annotations Target="SAP__self.AssetType/AssetLocation">
                 <Annotation Term="SAP__common.Label" String="Location Code"/>
                 <Annotation Term="SAP__common.IsUpperCase"/>
-                <Annotation Term="SAP__common.Heading" String="Location"/>
-                <Annotation Term="SAP__common.QuickInfo" String="Asset location"/>
-                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STORT"/>
+                <Annotation Term="SAP__common.Heading" String="Plnt"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Plant"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=WERKS_D"/>
             </Annotations>
             <Annotations Target="SAP__self.AssetType/LocationName">
                 <Annotation Term="SAP__common.Label" String="Location Name"/>
-                <Annotation Term="SAP__common.QuickInfo" String="Location Name"/>
+                <Annotation Term="SAP__common.Heading" String="Plant Name"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Plant Name"/>
             </Annotations>
             <Annotations Target="SAP__self.AssetType/Room">
                 <Annotation Term="SAP__common.IsUpperCase"/>
@@ -283,6 +290,10 @@
             </Annotations>
             <Annotations Target="SAP__self.AssetType/SublocationCode">
                 <Annotation Term="SAP__common.Label" String="Sublocation Code"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Room"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Room"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=RAUMNR"/>
             </Annotations>
             <Annotations Target="SAP__self.AssetType/SublocationName">
                 <Annotation Term="SAP__common.Label" String="Sublocation Name"/>
@@ -305,42 +316,9 @@
             <Annotations Target="SAP__self.AssetType/AcquisitionCost">
                 <Annotation Term="SAP__common.Label" String="Acquisition Cost"/>
                 <Annotation Term="SAP__measures.ISOCurrency" Path="CompanyCodeCurrency"/>
-                <Annotation Term="SAP__common.Heading" String="Original Value"/>
-                <Annotation Term="SAP__common.QuickInfo" String="Original Acquisition Value"/>
-                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=URWRT"/>
-            </Annotations>
-            <Annotations Target="SAP__self.AssetType/PlannedUsefulLifeInPeriods">
-                <Annotation Term="SAP__common.IsDigitSequence"/>
-                <Annotation Term="SAP__common.Label" String="Planned Useful Life in Periods"/>
-            </Annotations>
-            <Annotations Target="SAP__self.AssetType/PlannedUsefulLifeInYears">
-                <Annotation Term="SAP__common.IsDigitSequence"/>
-                <Annotation Term="SAP__common.Label" String="Planned Useful Life"/>
-                <Annotation Term="SAP__common.Heading" String="Planned Useful Life in Years"/>
-                <Annotation Term="SAP__common.QuickInfo" String="Planned Useful Life in Years"/>
             </Annotations>
             <Annotations Target="SAP__self.AssetType/UsefulLifeDisplay">
                 <Annotation Term="SAP__common.Label" String="Useful Life"/>
-            </Annotations>
-            <Annotations Target="SAP__self.AssetType/AssetRealDepreciationArea">
-                <Annotation Term="SAP__common.IsDigitSequence"/>
-                <Annotation Term="SAP__common.Label" String="Depreciation area"/>
-                <Annotation Term="SAP__common.Heading" String="Ar."/>
-                <Annotation Term="SAP__common.QuickInfo" String="Real depreciation area"/>
-                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AFABE_D"/>
-            </Annotations>
-            <Annotations Target="SAP__self.AssetType/PurchaseOrder">
-                <Annotation Term="SAP__common.IsUpperCase"/>
-                <Annotation Term="SAP__common.Label" String="Purchasing Document"/>
-                <Annotation Term="SAP__common.Heading" String="Pur. Doc."/>
-                <Annotation Term="SAP__common.QuickInfo" String="Purchasing Document Number"/>
-                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=EBELN"/>
-            </Annotations>
-            <Annotations Target="SAP__self.AssetType/PurchaseOrderItem">
-                <Annotation Term="SAP__common.IsDigitSequence"/>
-                <Annotation Term="SAP__common.Label" String="Item"/>
-                <Annotation Term="SAP__common.QuickInfo" String="Item Number of Purchasing Document"/>
-                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=EBELP"/>
             </Annotations>
             <Annotations Target="SAP__self.AssetType/CreatedByUser">
                 <Annotation Term="SAP__common.IsUpperCase"/>
@@ -394,10 +372,10 @@
                             <PropertyValue Property="Value" Path="CostCenter"/>
                         </Record>
                         <Record Type="SAP__UI.DataField">
-                            <PropertyValue Property="Value" Path="OwnerCode"/>
+                            <PropertyValue Property="Value" Path="CostCenterName"/>
                         </Record>
                         <Record Type="SAP__UI.DataField">
-                            <PropertyValue Property="Value" Path="CostCenterName"/>
+                            <PropertyValue Property="Value" Path="OwnerCode"/>
                         </Record>
                         <Record Type="SAP__UI.DataField">
                             <PropertyValue Property="Value" Path="OwnerName"/>
@@ -463,7 +441,7 @@
                                 </Record>
                                 <Record>
                                     <PropertyValue Property="Property" PropertyPath="MasterFixedAsset"/>
-                                    <PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
                                 </Record>
                                 <Record>
                                     <PropertyValue Property="Property" PropertyPath="CreationDate"/>
@@ -474,8 +452,6 @@
                         <PropertyValue Property="RequiredProperties">
                             <Collection>
                                 <PropertyPath>CompanyCode</PropertyPath>
-                                <PropertyPath>AssetRowID</PropertyPath>
-                                <PropertyPath>CreationDate</PropertyPath>
                             </Collection>
                         </PropertyValue>
                     </Record>

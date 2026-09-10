@@ -77,6 +77,12 @@
                 <Annotation Term="SAP__common.Heading" String="Class"/>
                 <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ANLKL"/>
             </Annotations>
+            <Annotations Target="SAP__self.ZFI_I_AssetClassVHType/AssetClassName">
+                <Annotation Term="SAP__common.Label" String="Asset Class Name"/>
+                <Annotation Term="SAP__common.Heading" String="Asset Class, Name"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Asset Class, Name"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FAA_ASSET_CLASS_NAME"/>
+            </Annotations>
             <Annotations Target="SAP__ParentService.AssetType/AssetClass">
                 <Annotation Term="SAP__common.ValueListMapping">
                     <Record>
@@ -190,10 +196,6 @@
                 </Annotation>
                 <Annotation Term="SAP__capabilities.KeyAsSegmentSupported"/>
                 <Annotation Term="SAP__capabilities.AsynchronousRequestsSupported"/>
-            </Annotations>
-            <Annotations Target="SAP__self.ZFI_I_AssetClassVHType/AssetClassName">
-                <Annotation Term="SAP__common.Label" String="Asset Class, Name"/>
-                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FAA_ASSET_CLASS_NAME"/>
             </Annotations>
             <Annotations Target="SAP__self.ZFI_I_AssetClassVHType/AssetClassDescription">
                 <Annotation Term="SAP__common.Label" String="Description"/>
